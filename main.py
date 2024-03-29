@@ -46,6 +46,7 @@ class Player(pygame.sprite.Sprite):
         self.cheat = False
 
     def update(self) -> None:
+        global score
         key = pygame.key.get_pressed()
         self.speedx = 0
         self.speedy = 0
@@ -61,7 +62,7 @@ class Player(pygame.sprite.Sprite):
         if key[pygame.K_t]: self.cheat = False
         if key[pygame.K_y]: 
             self.cheat = True
-            lvl -= 1
+            score -= 1
 
         self.rect.x += self.speedx
         self.rect.y += self.speedy
