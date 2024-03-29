@@ -59,7 +59,9 @@ class Player(pygame.sprite.Sprite):
         if key[pygame.K_d]:
             self.speedx += self.speed
         if key[pygame.K_t]: self.cheat = False
-        if key[pygame.K_y]: self.cheat = True
+        if key[pygame.K_y]: 
+            self.cheat = True
+            lvl -= 1
 
         self.rect.x += self.speedx
         self.rect.y += self.speedy
